@@ -1,7 +1,9 @@
-var ProductCategoryRow = React.createClass({
-    render: function () {
+export default class ProductCategoryRow extends React.Component {
+    render() {
         return (
-            <tr><th colSpan="2">{this.props.category}</th></tr>
+            <tr>
+                <th className="text-left" colSpan="2">{this.props.category}</th>
+            </tr>
         )
     }
-})
+}

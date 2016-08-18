@@ -1,11 +1,12 @@
-var SearchBar = React.createClass({
-    handleChange: function () {
+export default class SearchBar extends React.Component {
+    handleChange() {
         this.props.onUserInput(
             this.refs.filterTextIput.value,
             this.refs.inStockOnlyInput.checked
         )
-    },
-    render: function () {
+    }
+
+    render() {
         return (
             <form>
                 <input
@@ -16,8 +17,8 @@ var SearchBar = React.createClass({
                     onChange={this.handleChange}
                 />
                 <p>
-                    <input 
-                        type="checkbox" 
+                    <input
+                        type="checkbox"
                         checked={this.props.inStockOnly}
                         ref="inStockOnlyInput"
                         onChange={this.handleChange}
@@ -26,6 +27,6 @@ var SearchBar = React.createClass({
                     Only show products in stock
                 </p>
             </form>
-        )
+        );
     }
-})
+}

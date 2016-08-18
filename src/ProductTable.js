@@ -1,8 +1,11 @@
-var ProductTable = React.createClass({
-    render: function () {
-        var rows = [];
-        var lastCategory = null;
-        this.props.products.forEach(function (product) {
+import ProductCategoryRow from './ProductCategoryRow.js'
+import ProductRow from './ProductRow.js'
+
+export default class ProductTable extends React.Component {
+    render() {
+        let rows = [];
+        let lastCategory = null;
+        this.props.products.forEach((product) => {
             if (product.name.indexOf(this.props.filterText) === -1 || (this.props.inStockOnly && !product.stocked )) {
                 return;
             }
@@ -11,17 +14,17 @@ var ProductTable = React.createClass({
             }
             rows.push(<ProductRow product={product} key={product.name}/>);
             lastCategory = product.category;
-        }.bind(this));
+        });
         return (
             <table>
                 <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                    </tr>
+                <tr>
+                    <th className="text-left">Name</th>
+                    <th className="text-left">Price</th>
+                </tr>
                 </thead>
                 <tbody>{rows}</tbody>
             </table>
         )
     }
-});
+};
