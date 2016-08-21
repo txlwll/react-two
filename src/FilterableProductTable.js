@@ -8,9 +8,18 @@ export default class FilterableProductTable extends React.Component {
             filterText: '',
             inStockOnly: false,
         }
+
+        // this.handleUserInput = this.handleUserInput.bind(this)
     }
 
-    handleUserInput(filterText, inStockOnly) {
+    // handleUserInput(filterText, inStockOnly) {
+    //     this.setState({
+    //         filterText: filterText,
+    //         inStockOnly: inStockOnly
+    //     });
+    // }
+
+    handleUserInput = (filterText, inStockOnly) => {
         this.setState({
             filterText: filterText,
             inStockOnly: inStockOnly
@@ -33,6 +42,7 @@ export default class FilterableProductTable extends React.Component {
         )
     }
 };
+
 var PRODUCT = [
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
     {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
@@ -42,6 +52,7 @@ var PRODUCT = [
     {category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"},
     {category: "Electronics", price: "$994.99", stocked: true, name: "Nexus 8"}
 ];
+
 ReactDOM.render(
     <FilterableProductTable products={PRODUCT}/>,
     document.getElementById('example')

@@ -12,7 +12,7 @@ module.exports = {
                 exclude: /node_modules/,                  //忽略这个文件夹目录下的文件
                 loader: 'babel',                         //  加载器名字，对应的包名字 babel-lorder
                 query: {
-                    presets: ['es2015', 'react']         //加载js/jsx文件时顺便把es6转成es5，把jsx转成js。
+                    presets: ['es2015', 'stage-1', 'react']         //加载js/jsx文件时顺便把es6转成es5，把jsx转成js。
                 }
             }
         ]

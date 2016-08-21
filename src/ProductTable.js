@@ -18,13 +18,15 @@ export default class ProductTable extends React.Component {
         return (
             <table>
                 <thead>
-                <tr>
-                    <th className="text-left">Name</th>
-                    <th className="text-left">Price</th>
-                </tr>
+                    <tr>
+                        <th className="text-left">Name</th>
+                        <th className="text-left">Price</th>
+                    </tr>
                 </thead>
                 <tbody>{rows}</tbody>
             </table>
         )
     }
-};
+}
+
+module.exports = ProductTable

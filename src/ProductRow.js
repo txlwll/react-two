@@ -10,3 +10,5 @@ export default class ProductRow extends React.Component {
         )
     }
 }
+
+module.exports = ProductRow

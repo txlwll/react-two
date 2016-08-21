@@ -7,3 +7,5 @@ export default class ProductCategoryRow extends React.Component {
         )
     }
 }
+
+module.exports = ProductCategoryRow

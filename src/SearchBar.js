@@ -1,5 +1,17 @@
 export default class SearchBar extends React.Component {
-    handleChange() {
+    // constructor(props) {
+    //     super(props);
+    //     this.handleChange = this.handleChange.bind(this);
+    // }
+    //
+    // handleChange() {
+    //     this.props.onUserInput(
+    //         this.refs.filterTextIput.value,
+    //         this.refs.inStockOnlyInput.checked
+    //     )
+    // }
+
+    handleChange = () => {
         this.props.onUserInput(
             this.refs.filterTextIput.value,
             this.refs.inStockOnlyInput.checked
@@ -30,3 +42,5 @@ export default class SearchBar extends React.Component {
         );
     }
 }
+
+module.exports = SearchBar
