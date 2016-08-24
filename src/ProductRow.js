@@ -1,4 +1,4 @@
-export default class ProductRow extends React.Component {
+class ProductRow extends React.Component {
     render() {
         const name = this.props.product.stocked ? this.props.product.name :
             <span style={{color: 'red'}}>{this.props.product.name}</span>;
@@ -11,4 +11,4 @@ export default class ProductRow extends React.Component {
     }
 }
 
-module.exports = ProductRow
+export default ProductRow

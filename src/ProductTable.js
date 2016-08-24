@@ -1,7 +1,7 @@
 import ProductCategoryRow from './ProductCategoryRow.js'
 import ProductRow from './ProductRow.js'
 
-export default class ProductTable extends React.Component {
+class ProductTable extends React.Component {
     render() {
         let rows = [];
         let lastCategory = null;
@@ -29,4 +29,4 @@ export default class ProductTable extends React.Component {
     }
 }
 
-module.exports = ProductTable
+export default ProductTable

@@ -1,5 +1,7 @@
 import SearchBar from './SearchBar'
 import ProductTable from './ProductTable';
+// var ProductTable = require('./ProductTable')
+let imgContent = require('./image/ruzhu1-samll.png');
 
 export default class FilterableProductTable extends React.Component {
     constructor(props) {
@@ -38,12 +40,13 @@ export default class FilterableProductTable extends React.Component {
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                     products={this.props.products}/>
+                <img src={imgContent} />
             </div>
         )
     }
 };
 
-var PRODUCT = [
+let PRODUCT = [
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
     {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
     {category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},

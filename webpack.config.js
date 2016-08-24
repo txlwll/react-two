@@ -1,4 +1,4 @@
-var webpack = require("webpack");      //引入webpack
+let webpack = require("webpack");      //引入webpack
 
 module.exports = {
     entry: './src/FilterableProductTable.js',      //要打包的文件，只打包入口文件
@@ -14,6 +14,14 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'stage-1', 'react']         //加载js/jsx文件时顺便把es6转成es5，把jsx转成js。
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url?limit=8192'
             }
         ]
     },
@@ -22,7 +30,7 @@ module.exports = {
             // $: "jquery"
             React: "react",
             ReactDOM: "react-dom",
-        })
+        }),
     ]                       //依赖注入，全局注册这两个库是为了不用在写react组件时每次都引用它们，当代码里面用到时，它会自动到加载对应的包
 };
 

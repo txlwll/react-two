@@ -1,4 +1,4 @@
-export default class SearchBar extends React.Component {
+class SearchBar extends React.Component {
     // constructor(props) {
     //     super(props);
     //     this.handleChange = this.handleChange.bind(this);
@@ -43,4 +43,4 @@ export default class SearchBar extends React.Component {
     }
 }
 
-module.exports = SearchBar
+export default SearchBar
