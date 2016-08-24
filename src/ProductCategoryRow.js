@@ -5,7 +5,7 @@ class ProductCategoryRow extends React.Component {
         return (
             <tr>
                 <th className="text-left" colSpan="2">{this.props.category}</th>
-                <img src={require('./image/ruzhu1-samll.png')} alt=""/>
+                {/* <img src={require('./image/ruzhu1-samll.png')} alt=""/>*/}
             </tr>
         )
     }

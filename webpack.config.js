@@ -1,7 +1,7 @@
-let webpack = require("webpack");      //引入webpack
+var webpack = require("webpack");      //引入webpack
 
 module.exports = {
-    entry: './src/FilterableProductTable.js',      //要打包的文件，只打包入口文件
+    entry: './src/index.js',      //要打包的文件，只打包入口文件
     output: {
         filename: 'bundle.js'   //打包出的文件
     },

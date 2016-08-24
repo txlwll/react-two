@@ -3,7 +3,7 @@ import ProductTable from './ProductTable';
 // var ProductTable = require('./ProductTable')
 let imgContent = require('./image/ruzhu1-samll.png');
 
-export default class FilterableProductTable extends React.Component {
+class FilterableProductTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,7 +39,7 @@ export default class FilterableProductTable extends React.Component {
                 <ProductTable
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
-                    products={this.props.products}/>
+                    products={PRODUCT}/>
                 <img src={imgContent} />
             </div>
         )
@@ -56,7 +56,4 @@ let PRODUCT = [
     {category: "Electronics", price: "$994.99", stocked: true, name: "Nexus 8"}
 ];
 
-ReactDOM.render(
-    <FilterableProductTable products={PRODUCT}/>,
-    document.getElementById('example')
-)
+export default FilterableProductTable
